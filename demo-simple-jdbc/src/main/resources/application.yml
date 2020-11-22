@@ -1,0 +1,14 @@
+#pagehelper分页插件配置
+pagehelper:
+    helperDialect: mysql
+    pagehelper: reasonable=true
+    supportMethodsArguments: true
+    params: count=countSql
+
+mybatis:
+  mapper-locations:
+  - classpath*:mapper/*Mapper.xml
+  - classpath*:mapper/manual/*Mapper.xml
+  type-aliases-package: com.example.demo.db.model,com.example.demo.db.manual.model
+  configuration:
+    map-underscore-to-camel-case: true
