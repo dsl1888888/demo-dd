@@ -35,15 +35,14 @@ public class RedisConfigSingle
         om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
         jackson2JsonRedisSerializer.setObjectMapper(om);
 
-
         RedisTemplate<Serializable, Object> template = new RedisTemplate<>();
 
-        template.setKeySerializer(new StringRedisSerializer()); 
-        
+        template.setKeySerializer(new StringRedisSerializer());
+
         // template.setHashKeySerializer(new StringRedisSerializer());
 
         template.setConnectionFactory(redisConnectionFactory);
-//        template.setKeySerializer(jackson2JsonRedisSerializer);
+        // template.setKeySerializer(jackson2JsonRedisSerializer);
         template.setValueSerializer(jackson2JsonRedisSerializer);
         template.setHashKeySerializer(jackson2JsonRedisSerializer);
         template.setHashValueSerializer(jackson2JsonRedisSerializer);

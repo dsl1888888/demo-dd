@@ -21,65 +21,74 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Api(value = "desc of class")
 @RestController
-public class DemoRedisController {
+public class DemoRedisController
+{
 
-	private static final String solrDataName = "demo1";
+    private static final String solrDataName = "demo1";
 
-	@Autowired
-	private StringRedisTemplate redisTemplate;
+    @Autowired
+    private StringRedisTemplate redisTemplate;
 
-	@PostConstruct
-	public void init() {
+    @PostConstruct
+    public void init()
+    {
 
-		try {
-			log.info(redisTemplate.toString());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+        try
+        {
+            log.info(redisTemplate.toString());
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 
-	/* 方法注解 */
-	@ApiOperation(value = "queryById", notes = "")
-	@RequestMapping(value = "demo/redis/queryById", method = RequestMethod.GET)
-	public String queryById(String id) {
-		String resp = "";
+    /* 方法注解 */
+    @ApiOperation(value = "queryById", notes = "")
+    @RequestMapping(value = "demo/redis/queryById", method = RequestMethod.GET)
+    public String queryById(String id)
+    {
+        String resp = "";
 
-		StringRedisUtil stringRedisUtil = new StringRedisUtil();
-		stringRedisUtil.setRedisTemplate(redisTemplate);
+        StringRedisUtil stringRedisUtil = new StringRedisUtil();
+        stringRedisUtil.setRedisTemplate(redisTemplate);
 
-		Object object = stringRedisUtil.get(id);
+        Object object = stringRedisUtil.get(id);
 
-		return "" + JSON.toJSONString(object);
-	}
+        return "" + JSON.toJSONString(object);
+    }
 
-	/* 方法注解 */
-	@ApiOperation(value = "detele", notes = "")
-	@RequestMapping(value = "demo/redis/detele", method = RequestMethod.GET)
-	public String detele(String id) {
-		StringRedisUtil stringRedisUtil = new StringRedisUtil();
-		stringRedisUtil.setRedisTemplate(redisTemplate);
+    /* 方法注解 */
+    @ApiOperation(value = "detele", notes = "")
+    @RequestMapping(value = "demo/redis/detele", method = RequestMethod.GET)
+    public String detele(String id)
+    {
+        StringRedisUtil stringRedisUtil = new StringRedisUtil();
+        stringRedisUtil.setRedisTemplate(redisTemplate);
 
-		stringRedisUtil.deleteAll(id);
-		return "ok";
-	}
+        stringRedisUtil.deleteAll(id);
+        return "ok";
+    }
 
-//  /* 方法注解 */
-//  @ApiOperation(value = "insertBatch", notes = "")
-//  @RequestMapping(value = "demo/redis/insertBatch", method = RequestMethod.GET)
-//  public String insertBatch() throws IOException {
-//
-//    return "{\"name\":\"我是名字\",\"pwd\":\"我是密碼\"}";
-//  }
+    // /* 方法注解 */
+    // @ApiOperation(value = "insertBatch", notes = "")
+    // @RequestMapping(value = "demo/redis/insertBatch", method =
+    // RequestMethod.GET)
+    // public String insertBatch() throws IOException {
+    //
+    // return "{\"name\":\"我是名字\",\"pwd\":\"我是密碼\"}";
+    // }
 
-	/* 方法注解 */
-	@ApiOperation(value = "insertOne", notes = "")
-	@RequestMapping(value = "demo/redis/insertOne", method = RequestMethod.GET)
-	public String insertOne() throws IOException {
-		StringRedisUtil stringRedisUtil = new StringRedisUtil();
-		stringRedisUtil.setRedisTemplate(redisTemplate);
+    /* 方法注解 */
+    @ApiOperation(value = "insertOne", notes = "")
+    @RequestMapping(value = "demo/redis/insertOne", method = RequestMethod.GET)
+    public String insertOne() throws IOException
+    {
+        StringRedisUtil stringRedisUtil = new StringRedisUtil();
+        stringRedisUtil.setRedisTemplate(redisTemplate);
 
-		stringRedisUtil.set("1",
-				"[{\"code\":\"1\",\"value\":\"https://h5.cashlena.com/web/UserNotice.html\"},{\"code\":\"2\",\"value\":\"https://h5.cashlena.com/web/PrivacyPolicy.html\"},{\"code\":\"3\",\"value\":\"https://h5.cashlena.com/Protocol/borrow\"},{\"code\":\"4\",\"value\":\"https://h5.cashlena.com/web/empower/empower.html\"}]");
-		return "{\"name\":\"我是名字\",\"pwd\":\"我是密碼\"}";
-	}
+        stringRedisUtil.set("1",
+                            "[{\"code\":\"1\",\"value\":\"https://h5.cashlena.com/web/UserNotice.html\"},{\"code\":\"2\",\"value\":\"https://h5.cashlena.com/web/PrivacyPolicy.html\"},{\"code\":\"3\",\"value\":\"https://h5.cashlena.com/Protocol/borrow\"},{\"code\":\"4\",\"value\":\"https://h5.cashlena.com/web/empower/empower.html\"}]");
+        return "{\"name\":\"我是名字\",\"pwd\":\"我是密碼\"}";
+    }
 }

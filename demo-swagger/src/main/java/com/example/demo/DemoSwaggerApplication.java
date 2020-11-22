@@ -7,10 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * https://blog.csdn.net/u012702547/article/details/88775298
  */
 @SpringBootApplication
-public class DemoSwaggerApplication {
+public class DemoSwaggerApplication
+{
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoSwaggerApplication.class, args);
-	}
+    public static void main(String[] args)
+    {
+        SpringApplication.run(DemoSwaggerApplication.class, args);
+    }
 
 }

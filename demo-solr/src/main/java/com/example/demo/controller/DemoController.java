@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 /* 类注解 */
 @Api(value = "desc of class")
 @RestController
-public class DemoController {
+public class DemoController
+{
     /* 方法注解 */
     @ApiOperation(value = "desc of method", notes = "")
-    @RequestMapping(value = "demo",method = RequestMethod.GET)
-    public String demo() {
+    @RequestMapping(value = "demo", method = RequestMethod.GET)
+    public String demo()
+    {
         return "{\"name\":\"我是名字\",\"pwd\":\"我是密碼\"}";
     }
 }

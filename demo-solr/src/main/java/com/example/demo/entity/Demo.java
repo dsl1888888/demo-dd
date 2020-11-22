@@ -5,7 +5,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
 @SolrDocument(solrCoreName = "demo1")
-public class Demo {
+public class Demo
+{
 
     @Id
     @Field

@@ -27,8 +27,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Api(value = "desc of class")
 @RestController
-public class DemoSolrController {
-
+public class DemoSolrController
+{
 
     private final static String solrDataName = "demo1";
 
@@ -36,51 +36,67 @@ public class DemoSolrController {
     private SolrClient solrClient;
 
     @PostConstruct
-    public void init() {
+    public void init()
+    {
 
-        try {
+        try
+        {
             log.info(solrClient.toString());
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
 
-
     /* 方法注解 */
     @ApiOperation(value = "queryById", notes = "")
     @RequestMapping(value = "demo/solr/queryById", method = RequestMethod.GET)
-    public String queryById(String id) {
+    public String queryById(String id)
+    {
         String resp = "";
-        try {
+        try
+        {
             SolrQuery query = new SolrQuery();
-            //查询参数q
+            // 查询参数q
             query.set("q", "id:" + id);
             query.set("fl", "*");
-//            query.set("sort", "sortOrder asc,goodsPrice asc");
+            // query.set("sort", "sortOrder asc,goodsPrice asc");
             QueryResponse response = solrClient.query(solrDataName, query);
             SolrDocumentList results = response.getResults();
-            if (results.getNumFound() == 0) {
+            if (results.getNumFound() == 0)
+            {
                 resp = "";
-            } else {
+            }
+            else
+            {
                 resp = "" + results.get(0).toString();
             }
-        } catch (SolrServerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        }
+        catch (SolrServerException e)
+        {
             e.printStackTrace();
         }
-        
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
         return "" + JSON.toJSONString(resp);
     }
 
     /* 方法注解 */
     @ApiOperation(value = "detele", notes = "")
     @RequestMapping(value = "demo/solr/detele", method = RequestMethod.GET)
-    public String detele() {
-        try {
+    public String detele()
+    {
+        try
+        {
             solrClient.deleteByQuery(solrDataName, "*:*");
             solrClient.commit(solrDataName);
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             log.error("删除solr数据失败");
         }
         return "{\"name\":\"我是名字\",\"pwd\":\"我是密碼\"}";
@@ -89,11 +105,13 @@ public class DemoSolrController {
     /* 方法注解 */
     @ApiOperation(value = "insertBatch", notes = "")
     @RequestMapping(value = "demo/solr/insertBatch", method = RequestMethod.GET)
-    public String insertBatch() throws IOException, SolrServerException {
+    public String insertBatch() throws IOException, SolrServerException
+    {
 
         CopyOnWriteArrayList<SolrInputDocument> docs = new CopyOnWriteArrayList<>();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++)
+        {
             SolrInputDocument doc = new SolrInputDocument();
             String uuid = UUID.randomUUID().toString().replace("-", "");
             doc.setField("id", uuid);
@@ -102,7 +120,8 @@ public class DemoSolrController {
             doc.setField("details", "details" + uuid);
             docs.add(doc);
         }
-        if (docs.size() > 0) {
+        if (docs.size() > 0)
+        {
             solrClient.add(solrDataName, docs);
             solrClient.commit(solrDataName);
         }
@@ -112,11 +131,13 @@ public class DemoSolrController {
     /* 方法注解 */
     @ApiOperation(value = "insertOne", notes = "")
     @RequestMapping(value = "demo/solr/insertOne", method = RequestMethod.GET)
-    public String insertOne() throws IOException, SolrServerException {
+    public String insertOne() throws IOException, SolrServerException
+    {
 
         CopyOnWriteArrayList<SolrInputDocument> docs = new CopyOnWriteArrayList<>();
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 1; i++)
+        {
             SolrInputDocument doc = new SolrInputDocument();
             String uuid = UUID.randomUUID().toString().replace("-", "");
             doc.setField("id", uuid);
@@ -125,7 +146,8 @@ public class DemoSolrController {
             doc.setField("details", "details=" + uuid);
             docs.add(doc);
         }
-        if (docs.size() > 0) {
+        if (docs.size() > 0)
+        {
             solrClient.add(solrDataName, docs);
             solrClient.commit(solrDataName);
         }
