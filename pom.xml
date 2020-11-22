@@ -71,6 +71,7 @@
 		<module>demo-solr</module>
 		<module>demo-swagger</module>
 		<module>demo-eureka</module>
+		<module>demo-log4j</module>
  
 	</modules>
 
