@@ -1,0 +1,40 @@
+zuul:
+  #是否开启重试功能
+  retryable: true
+  routes:
+    #登录服务  
+    api-service01zuul:
+      path: /service01zuul/**
+      serviceId: demo-cloud-service01
+    #登录服务  
+    api-service02zuul:
+      path: /service02zuul/**
+      serviceId: demo-cloud-service02
+
+#路由超时，即socket超时设置
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 600000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  
+  
+feign:
+  hystrix:
+    enabled: true
+    
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 512MB
+      max-request-size: 1024MB
+      
+#hystrix设置时间
+hystrix:
+  command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 50000
