@@ -1,3 +1,12 @@
+#zuul:  
+##  prefix: /v1
+#  routes:
+#    ribbon:
+#      path: /ribbon/**
+#      serviceId: demo-cloud-service01  # 转发到消费者 /ribbon/
+#    feign:
+#      path: /feign/**
+#      serviceId: demo-cloud-service01  # 转发到消费者 /feign/
 zuul:
   #是否开启重试功能
   retryable: true
@@ -23,18 +32,18 @@ feign:
   hystrix:
     enabled: true
     
-spring:
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 512MB
-      max-request-size: 1024MB
-      
-#hystrix设置时间
-hystrix:
-  command:
-      default:
-        execution:
-          isolation:
-            thread:
-              timeoutInMilliseconds: 50000
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-file-size: 512MB
+#      max-request-size: 1024MB
+#      
+##hystrix设置时间
+#hystrix:
+#  command:
+#      default:
+#        execution:
+#          isolation:
+#            thread:
+#              timeoutInMilliseconds: 50000
