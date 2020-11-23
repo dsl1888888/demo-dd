@@ -69,7 +69,7 @@
 		<module>demo-redis</module>
 		<module>demo-rest</module>
 		<module>demo-solr</module>
-		<module>demo-hbase</module>
+<!-- 		<module>demo-hbase</module> -->
 		<module>demo-swagger</module>
 		<module>demo-eureka</module>
 		<module>demo-log4j</module>
