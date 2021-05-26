@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent> 
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.12.BUILD-SNAPSHOT</version>
-		<relativePath/>
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>demo-pp-parent</artifactId>
+	<artifactId>demo-simple-use-springboot-admin-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo-pp-parent</name>
+	<name>demo-simple-use-springboot-admin-client</name>
 	<description>Demo project for Spring Boot</description>
-
-	<packaging>pom</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +29,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -54,6 +53,26 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+
+	<dependency>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-starter-client</artifactId>
+        <version>2.2.4</version>
+      </dependency>
+      
+
 	</dependencies>
 
 	<build>
@@ -65,31 +84,7 @@
 		</plugins>
 	</build>
 
-	<modules>
-		<module>demo-docker</module>
-		<module>demo-redis</module>
-		<module>demo-rest</module>
-		<module>demo-solr</module> 
-		<module>demo-swagger</module>
-		<module>demo-swagger-01</module>
-		<module>demo-eureka</module>
-		<module>demo-log4j</module>
-		<module>demo-simple-jdbc</module>
-		<module>demo-simple-monitor-process</module>
-		<module>demo-simple-use-springboot-admin-client</module>
-		<module>demo-simple-use-springboot-admin-server</module>
-		<module>demo-cloud-admin</module>
-		<module>demo-cloud-zipkin-client</module>
-		<module>demo-cloud-service01</module>
-        <module>demo-cloud-service02</module>
-		<module>demo-cloud-zuul</module>
-		<module>demo-cloud-config-server</module>
-		<module>demo-cloud-hystrix-dashboard</module>
-		
-	</modules>
-
-
-<repositories>
+	<repositories>
 		<repository>
 			<id>spring-milestones</id>
 			<name>Spring Milestones</name>
@@ -119,5 +114,4 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
 </project>
