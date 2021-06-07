@@ -1,9 +1,15 @@
 package com.example.demo.controller;
 
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -19,4 +25,9 @@ public class DemoController {
 		return aaString;
 	}
 
+	@ApiOperation(value = "", notes = "")
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public void index(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.sendRedirect(request.getContextPath() + "/swagger-ui.html");
+	}
 }
