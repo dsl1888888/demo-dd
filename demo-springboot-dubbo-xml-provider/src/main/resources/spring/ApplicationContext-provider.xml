@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- hessian协议用于文件上传 -->
+<!--     <dubbo:protocol name="hessian" port="8980"   /> -->
+
+	<!-- 监控中心配置 -->
+	<!-- 监控中心协议，如果为protocol="registry"，表示从注册中心发现监控中心地址，否则直连监控中心 -->
+	<!-- 直连监控中心服务器地址，如：address="192.168.3.71:7070" -->
+	<dubbo:monitor protocol="registry"/>
+
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.example.demo.service.WykjUserIdRemoteService" ref="wykjUserIdRemoteService" timeout="20000" retries="0" loadbalance = "random" weight="200"  />
+ 
+</beans>
+

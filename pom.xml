@@ -85,6 +85,7 @@
 		<module>demo-cloud-zuul</module>
 		<module>demo-cloud-config-server</module>
 		<module>demo-cloud-hystrix-dashboard</module>
+		<module>demo-springboot-dubbo-xml-parent</module>
 		
 	</modules>
 
