@@ -8,9 +8,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		 
-		<module>../demo-springboot-dubbo-nacos-api</module>
-		<module>../demo-springboot-dubbo-nacos-consumer</module>
- 		<module>../demo-springboot-dubbo-nacos-provider</module>
+		<module>demo-springboot-dubbo-nacos-api</module>
+		<module>demo-springboot-dubbo-nacos-consumer</module>
+ 		<module>demo-springboot-dubbo-nacos-provider</module>
 		
 		
 	</modules>

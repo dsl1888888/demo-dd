@@ -8,9 +8,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		 
-		<module>../demo-springboot-dubbo-annotation-api</module>
-		<module>../demo-springboot-dubbo-annotation-consumer</module>
- 		<module>../demo-springboot-dubbo-annotation-provider</module>
+		<module>demo-springboot-dubbo-annotation-api</module>
+		<module>demo-springboot-dubbo-annotation-consumer</module>
+ 		<module>demo-springboot-dubbo-annotation-provider</module>
 		
 		
 	</modules>

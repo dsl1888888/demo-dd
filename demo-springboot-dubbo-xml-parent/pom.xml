@@ -8,9 +8,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		 
-		<module>../demo-springboot-dubbo-xml-api</module>
-		<module>../demo-springboot-dubbo-xml-consumer</module>
- 		<module>../demo-springboot-dubbo-xml-provider</module>
+		<module>demo-springboot-dubbo-xml-api</module>
+		<module>demo-springboot-dubbo-xml-consumer</module>
+ 		<module>demo-springboot-dubbo-xml-provider</module>
 		
 		
 	</modules>

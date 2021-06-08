@@ -74,22 +74,16 @@
 		<module>demo-solr</module> 
 		<module>demo-swagger</module>
 		<module>demo-swagger-01</module>
-		<module>demo-eureka</module>
 		<module>demo-log4j</module>
 		<module>demo-simple-jdbc</module>
 		<module>demo-simple-monitor-process</module>
 		<module>demo-simple-use-springboot-admin-client</module>
 		<module>demo-simple-use-springboot-admin-server</module>
-		<module>demo-cloud-admin</module>
-		<module>demo-cloud-zipkin-client</module>
-		<module>demo-cloud-service01</module>
-        <module>demo-cloud-service02</module>
-		<module>demo-cloud-zuul</module>
-		<module>demo-cloud-config-server</module>
-		<module>demo-cloud-hystrix-dashboard</module>
+	 
 		<module>demo-springboot-dubbo-xml-parent</module>
 		<module>demo-springboot-dubbo-annotation-parent</module>
 		<module>demo-springboot-dubbo-nacos-parent</module>
+		<module>demo-springcloud-parent</module>
 	</modules>
 
 
