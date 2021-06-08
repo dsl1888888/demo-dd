@@ -87,6 +87,7 @@
 		<module>demo-cloud-hystrix-dashboard</module>
 		<module>demo-springboot-dubbo-xml-parent</module>
 		<module>demo-springboot-dubbo-annotation-parent</module>
+		<module>demo-springboot-dubbo-nacos-parent</module>
 	</modules>
 
 
