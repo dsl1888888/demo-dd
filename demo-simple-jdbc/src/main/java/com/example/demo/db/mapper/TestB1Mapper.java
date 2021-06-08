@@ -1,6 +1,6 @@
 package com.example.demo.db.mapper;
 
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Select;
 
 import com.example.demo.db.model.TestB1;
 
@@ -9,13 +9,10 @@ import com.example.demo.db.model.TestB1;
  * @author Administrator
  *
  */
-@Repository
-public interface TestB1Mapper 
-//extends BaseMapper<TestB1> 
+public interface TestB1Mapper
 {
 
-    
-   @org.apache.ibatis.annotations.Select(" select * from test_b1 ")
-   public java.util.List<TestB1> listAll();
-     
+    @Select(" select * from test_b1 ")
+    public java.util.List<TestB1> listAll();
+
 }
