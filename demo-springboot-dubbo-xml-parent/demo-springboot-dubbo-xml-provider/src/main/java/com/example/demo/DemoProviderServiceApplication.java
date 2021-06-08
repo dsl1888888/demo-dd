@@ -12,10 +12,16 @@ import org.springframework.context.annotation.ComponentScan;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@SpringBootApplication(exclude = { MongoAutoConfiguration.class, MongoDataAutoConfiguration.class,
-		DataSourceAutoConfiguration.class, RedisAutoConfiguration.class, RedisRepositoriesAutoConfiguration.class })
-@ComponentScan(basePackages = { "org.springframework.boot.autoconfigure.klock.KlockAutoConfiguration",
-		"com.example.demo", "com.example.demo.config", "com.example.demo.config.service" })
+@SpringBootApplication(exclude = { 
+       MongoAutoConfiguration.class, 
+       MongoDataAutoConfiguration.class,
+		DataSourceAutoConfiguration.class, 
+		RedisAutoConfiguration.class, 
+		RedisRepositoriesAutoConfiguration.class })
+@ComponentScan(basePackages = { 
+		"com.example.demo", 
+		"com.example.demo.config", 
+		"com.example.demo.config.service" })
 public class DemoProviderServiceApplication {
 
 	public static void main(String[] args) {

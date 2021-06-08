@@ -22,10 +22,6 @@
 		<!-- 跳过测试 -->
 		<maven.test.skip>true</maven.test.skip>
 		<java.version>1.8</java.version>
-		<!-- SpringBoot 2.1.5 pom.xml Unknown 错误 -->
-		<!-- <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version> -->
-		<spring-cloud.version>Greenwich.BUILD-SNAPSHOT</spring-cloud.version>
-		<spring-boot-admin.version>2.1.5</spring-boot-admin.version>
 	</properties>
 
 	<dependencies>
@@ -59,17 +55,10 @@
 			<version>1.18.12</version>
 			<optional>true</optional>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.jayway.jsonpath</groupId>
-			<artifactId>json-path</artifactId>
-			<version>2.4.0</version>
 		</dependency>
 
 		<dependency>
@@ -83,34 +72,8 @@
 			<artifactId>curator-recipes</artifactId>
 			<version>2.13.0</version>
 		</dependency>
-		
-		 <!-- exclude tomcat jdbc connection pool, use HikariCP -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.tomcat</groupId>
-                    <artifactId>tomcat-jdbc</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
-        <!-- exclude tomcat-jdbc, Spring Boot will use HikariCP automatically  -->
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-            <version>2.6.0</version>
-        </dependency>
 
-        <!-- For MySQL -->
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>5.1.49</version>
-		</dependency>
-		
 		<dependency>
 			<groupId>com.example</groupId>
 			<artifactId>demo-springboot-dubbo-xml-api</artifactId>
@@ -123,20 +86,18 @@
 			</exclusions>
 		</dependency>
 
-
+		<!-- swagger2 -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.7.0</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.7.0</version>
 		</dependency>
-        
+
 
 	</dependencies>
 
