@@ -81,7 +81,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.common</groupId>
+			<groupId>com.common.dorosdebby</groupId>
 			<artifactId>common-redis</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

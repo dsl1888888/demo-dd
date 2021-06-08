@@ -66,6 +66,8 @@
 	</build>
 
 	<modules>
+		<module>common-redis</module>
+		<module>common-util</module>
 		<module>demo-docker</module>
 		<module>demo-redis</module>
 		<module>demo-rest</module>
