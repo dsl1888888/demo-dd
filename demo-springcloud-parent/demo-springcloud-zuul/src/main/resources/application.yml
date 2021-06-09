@@ -71,24 +71,3 @@ feign:
 #              timeoutInMilliseconds: 50000
 
 
-##https://blog.csdn.net/qq_29860591/article/details/104273030?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-6.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-6.control
-#spring:
-#  zipkin:
-##    base-url: http://192.168.180.137:9411/
-#    sender:
-#      type: rabbit
-#  sleuth:
-#    sampler:
-#      probability: 1.0
-#  rabbitmq:
-#    host: 192.168.0.222
-#    port: 5672
-#    username: admin
-#    password: admin
-#    listener: # 这里配置了重试策略
-#      direct:
-#        retry:
-#          enabled: true
-#      simple:
-#        retry:
-#          enabled: true
