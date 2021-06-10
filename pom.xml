@@ -83,6 +83,8 @@
 		<module>demo-springboot-dubbo-xml-parent</module>
 		<module>demo-springboot-dubbo-annotation-parent</module>
 		<module>demo-springboot-dubbo-nacos-parent</module>
+		<module>demo-springboot-mycat</module>
+		
 		<module>demo-springcloud-parent</module>
 	</modules>
 
