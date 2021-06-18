@@ -75,6 +75,8 @@
 		<module>demo-swagger</module>
 		<module>demo-swagger-01</module>
 		<module>demo-log4j</module>
+		<module>demo-file</module>
+		<module>demo-geoip</module>
 		<module>demo-simple-jdbc</module>
 		<module>demo-simple-monitor-process</module>
 		<module>demo-simple-use-springboot-admin-client</module>
@@ -83,8 +85,6 @@
 		<module>demo-springboot-dubbo-xml-parent</module>
 		<module>demo-springboot-dubbo-annotation-parent</module>
 		<module>demo-springboot-dubbo-nacos-parent</module>
-		<module>demo-springboot-file</module>
-		<module>demo-springboot-geoip</module>
 		<module>demo-springboot-mycat</module>
 		
 		<module>demo-springcloud-parent</module>
