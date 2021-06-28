@@ -41,6 +41,7 @@
 		<module>demo-geoip</module>
 		<module>demo-simple-jdbc</module>
 		<module>demo-simple-monitor-process</module>
+		<module>demo-SnowflakeIdWorker</module>
 		<module>demo-simple-use-springboot-admin-client</module>
 		<module>demo-simple-use-springboot-admin-server</module>
 
