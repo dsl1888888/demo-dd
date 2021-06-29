@@ -22,7 +22,7 @@ public class DemoGeoIPApplication
                                            .getPath();
         LookupService lookupService = new LookupService(geoLiteCityFilePath, LookupService.GEOIP_MEMORY_CACHE);
         // String ip = "218.28.2.111";
-        String ip = "188.119.149.71";
+        String ip = "79.141.171.49";
         InetAddress inetAddress = InetAddress.getByName(ip);
         System.out.println("areaCode:" + lookupService.getLocation(inetAddress).area_code);
         System.out.println("city:" + lookupService.getLocation(inetAddress).city);
