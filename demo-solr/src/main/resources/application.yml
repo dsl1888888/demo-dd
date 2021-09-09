@@ -1,4 +1,4 @@
 spring:
   data:
     solr:
-      host: http://192.168.0.237:8983/solr/
+      host: http://216.189.149.48:8983/solr
