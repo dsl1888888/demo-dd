@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.12.BUILD-SNAPSHOT</version>
+		<version>2.7.0</version>
 		<relativePath />
 	</parent>
 	<groupId>com.example</groupId>
@@ -42,8 +42,6 @@
 		<module>demo-simple-jdbc</module>
 		<module>demo-simple-monitor-process</module>
 		<module>demo-SnowflakeIdWorker</module>
-		<module>demo-simple-use-springboot-admin-client</module>
-		<module>demo-simple-use-springboot-admin-server</module>
 
 		<module>demo-springboot-dubbo-xml-parent</module>
 		<module>demo-springboot-dubbo-annotation-parent</module>
