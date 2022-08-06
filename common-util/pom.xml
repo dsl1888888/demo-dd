@@ -5,7 +5,7 @@
 
 	<groupId>com.common.dorosdebby</groupId>
 	<artifactId>common-util</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>common-util</name>
 
 	<dependencies>
@@ -126,7 +126,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
+			<version>1.18.20</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -196,7 +196,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
+			<version>1.18.20</version>
 			<scope>provided</scope>
 		</dependency>
 
