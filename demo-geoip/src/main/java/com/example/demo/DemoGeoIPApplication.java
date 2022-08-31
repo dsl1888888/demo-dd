@@ -17,10 +17,10 @@ public class DemoGeoIPApplication
     public static void main(String[] args) throws Exception
     {
         SpringApplication.run(DemoGeoIPApplication.class, args);
-//        String geoLiteCityFilePath = Thread.currentThread().getContextClassLoader().getResource("GeoLiteCity.dat")
-//                .getPath();
+        String geoLiteCityFilePath = Thread.currentThread().getContextClassLoader().getResource("GeoLiteCity.dat")
+                .getPath();
 
-        String geoLiteCityFilePath ="/root/GeoLiteCity.dat";
+//        String geoLiteCityFilePath ="/root/GeoLiteCity.dat";
         
         LookupService lookupService = new LookupService(geoLiteCityFilePath, LookupService.GEOIP_MEMORY_CACHE);
         // String ip = "218.28.2.111";
