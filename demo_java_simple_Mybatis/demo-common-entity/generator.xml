@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        
+        <jdbcConnection 
+            driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://8.210.212.227:3306/ry-vue" 
+            userId="root"
+            password="123456AaAa">
+        </jdbcConnection>
+        
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.example.demo.domain"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper/business"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.example.demo.mapper"
+                             targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+<!--         <table tableName="consumer" domainObjectName="Consumer"></table> -->
+<!--         <table tableName="goods" domainObjectName="Goods"></table> -->
+<!--         <table tableName="goods_images" domainObjectName="GoodsImages"></table> -->
+<!--         <table tableName="goods_type" domainObjectName="GoodsType"></table> -->
+        <table tableName="t_1" domainObjectName="T1"></table>
+
+        
+    </context>
+</generatorConfiguration>
